@@ -1,0 +1,36 @@
+target C {
+    keepalive: true
+};
+
+reactor Source {
+    physical action sample;
+    output sensor_msg:int;
+
+    reaction(sample) -> sensor_msg {==}
+}
+
+
+reactor Processing {
+    input sensor_msg:int;
+    output filtered_msg:int;
+
+    reaction(sensor_msg) -> filtered_msg {==}
+}
+
+reactor Sink {
+    input filtered_msg:int;
+
+    reaction(filtered_msg) {=
+    =} deadline(10 msec) {=
+
+    =}
+}
+
+main reactor {
+    s = new Source();
+    p = new Processing();
+    si = new Sink();
+
+    s.sensor_msg -> p.sensor_msg;
+    p.filtered_msg -> si.filtered_msg;
+}

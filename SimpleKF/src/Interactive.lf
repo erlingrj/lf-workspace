@@ -1,0 +1,29 @@
+/**
+ * Simple demonstration of the sensor simulator (used in the Rhythm examples).
+ * This has no audio output, but just tests the ncurses interface.
+ */
+target C {
+    threads: 1
+};
+preamble {=
+    //#include "sensor_simulator.h"
+    char* messages[] = {"Hello", "World"};
+    int num_messages = 2;
+=}
+
+reactor SensorInput {
+    preamble {=
+        void* read_input(void* user
+        
+
+    =}
+    
+}
+
+reactor KalmanFilter {
+    
+}
+
+main reactor {
+
+}

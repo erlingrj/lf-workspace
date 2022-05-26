@@ -1,0 +1,10 @@
+/**
+ * Print "Hello World!" in C++.
+ */
+target Cpp
+
+main reactor {
+    reaction(startup) {=
+        std::cout << "Hello World!";
+    =}
+}

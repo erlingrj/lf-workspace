@@ -1,0 +1,124 @@
+/**
+ * Print "Hello World!" in C++.
+ */
+target Cpp {
+  cmake-include: "kf.cmake"
+}
+
+
+
+reactor SensorInput(m:int(1)) { 
+    public preamble {=
+        #include <Eigen/Dense>
+        using namespace std;
+    =}
+    
+    output meas_out:Eigen::VectorXd;
+    timer t_sample(1 sec,1 sec);
+    
+    reaction(t_sample) -> meas_out {=
+        double gnss_sample;
+        Eigen::VectorXd gnss_sample_vec(m);
+        
+        cout <<"Enter GNSS input at t=" <<get_elapsed_logical_time() <<": ";
+        cin >> gnss_sample;
+        
+        gnss_sample_vec << gnss_sample;
+        meas_out.set(gnss_sample_vec);
+    =}    
+}
+
+
+reactor KalmanFilter(n:int(2), m:int(1)) {
+    public preamble {=
+        #include <Eigen/Dense>
+        #include "kf.hpp"
+        
+        using namespace std;
+    =}
+    
+    state kf:KalmanFilterCpp(n,m);
+    input meas_in:Eigen::VectorXd;
+    
+    output state_est:kf_states_t;
+
+    
+    reaction(startup) {=
+        int n = 2; // Number of states
+        int m = 1; // Number of measurements
+
+        double dt = 1.0; // 1pps
+
+        Eigen::MatrixXd A(n, n); // System dynamics matrix
+        Eigen::MatrixXd C(m, n); // Output matrix
+        Eigen::MatrixXd Q(n, n); // Process noise covariance
+        Eigen::MatrixXd R(m, m); // Measurement noise covariance
+        Eigen::MatrixXd P(n, n); // Estimate error covariance
+
+        // Simple constant-velocity system model
+        A << 1, dt, 
+             0, 1;
+             
+        // We are measuring position only (GNSS)
+        C << 1, 0;
+
+        // Reasonable covariance matrices
+        Q <<    .05, .05,
+                .0, .05;
+        R << 5;
+        P << .1, .1, 
+             .1, .1;
+
+        std::cout << "A: \n" << A << std::endl;
+        std::cout << "C: \n" << C << std::endl;
+        std::cout << "Q: \n" << Q << std::endl;
+        std::cout << "R: \n" << R << std::endl;
+        std::cout << "P: \n" << P << std::endl;
+
+        // Construct the filter
+        kf.init(dt,A, C, Q, R, P);
+        
+    =}
+    
+    reaction(meas_in) -> state_est {=
+                        
+        kf.update(*meas_in.get());
+         
+        Eigen::VectorXd x_hat = kf.get_state();
+        Eigen::MatrixXd cov = kf.get_covariance();
+         
+        kf_states_t new_states {x_hat, cov};
+        state_est.set(new_states);
+    =} 
+}
+
+
+
+reactor Display {
+    public preamble {=
+        #include "kf.hpp"
+        
+    =}
+    
+    input state_est:kf_states_t;
+    
+    reaction(state_est) {=
+        kf_states_t recv_states = *state_est.get();
+        
+        std::cout <<"t: " <<get_elapsed_logical_time() <<std::endl;
+        std::cout << "State: \n" <<recv_states.x_hat <<" " <<std::endl;
+        std::cout << "Covariance: \n" <<recv_states.P <<std::endl;
+        std::cout <<"Physical time: " <<get_elapsed_physical_time() <<std::endl;
+        std::cout <<"-----------------------------------------" <<std::endl;
+        
+    =}
+}
+
+main reactor {
+    s = new SensorInput();
+    kf = new KalmanFilter();
+    disp = new Display();
+    
+    s.meas_out -> kf.meas_in after 1 sec;
+    kf.state_est -> disp.state_est;
+}

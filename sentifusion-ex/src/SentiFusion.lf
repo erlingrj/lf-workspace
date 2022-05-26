@@ -1,0 +1,19 @@
+target Python
+
+
+reactor SentiReader {
+    physical action bytesRecv;
+
+    timer statusTimer(0, 1 sec);
+    output pkt;
+    
+    reaction(bytesRecv) -> pkt {=
+        
+    =}
+
+
+}
+
+main reactor {
+
+}

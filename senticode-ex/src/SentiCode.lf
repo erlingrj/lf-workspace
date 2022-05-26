@@ -1,0 +1,138 @@
+target C;
+
+
+reactor ClockFilter {
+    input pps:int;
+    input time_msg:int;
+    output clock_info:int;
+    
+    reaction(pps,time_msg) -> clock_info {==}
+
+}
+
+reactor MovingAverageFilter {
+    input sample:int;
+    output moving_average:int
+
+    reaction(sample) -> moving_average {=
+
+    =}
+} 
+
+reactor TimeStamper(n:int(4)) {
+    input[n] packet:int;
+    output[n] timestamped_pkt:int;
+    input xclock_info:int;
+}
+
+reactor PosStamper(n:int(4)) {
+    input[n] ts_pkt:int;
+    output[n] pos_pkt:int;
+    input states:int;
+
+    reaction(ts_pkt) -> 
+}
+
+reactor ImuParser {
+    physical action raw_imu:int;
+    output parsed_imu:int;
+
+    reaction(raw_imu) -> parsed_imu {==}
+
+}
+
+reactor GnssParser {
+    physical action raw_gnss:int;
+    output nav_pvt:int;
+    output relpos:int;
+    output time_msg:int;
+    output pps_msg:int;
+
+    preamble {=
+        void isr() {
+            schedule(raw_gnss, 5);
+        }
+    =}
+
+    reaction(raw_gnss) -> nav_pvt, relpos, time_msg, pps_msg {==}
+}
+
+reactor TriggerParser {
+    physical action raw_trigger:int;
+    output trigger_msg:int;
+
+    reaction(raw_trigger) -> trigger_msg {==}
+
+
+}
+
+reactor RawParser {
+    physical action raw_i:int;
+    output raw_msg:int;
+
+    reaction(raw_i) -> raw_msg {==}
+}
+
+reactor EKF {
+    input imu:int;
+    input pos:int;
+    mutable input heading:int;
+    output states:int;
+
+    preamble {=
+        #include 
+    =}
+
+    reaction(imu) -> states  {=
+
+    =}
+    reaction(pos) -> states  {=
+
+    =}
+    reaction(heading) -> states  {=
+
+    =}
+}
+
+
+reactor Outputter(n:int(2)) {
+    input[n] stamped_msg:int;
+}
+
+
+main reactor SentiCode {
+    preamble {=
+
+    =}
+    imu_parser = new ImuParser();
+    gnss_parser = new GnssParser();
+    ma1 = new MovingAverageFilter();    
+    ma2 = new MovingAverageFilter();
+    cf = new ClockFilter();
+    ekf = new EKF();
+
+    tser = new TimeStamper(n=2);
+    posstamper = new PosStamper(n=2);    
+
+    trig = new TriggerParser();
+    generic = new RawParser();
+    
+    out = new Outputter(n=3);
+
+
+    imu_parser.parsed_imu -> ma1.sample;
+    ma1.moving_average -> ekf.imu;
+    gnss_parser.pps_msg->ma2.sample;
+    gnss_parser.nav_pvt->ekf.pos;
+    gnss_parser.relpos ->ekf.heading;
+    gnss_parser.time_msg -> cf.time_msg;
+    ma2.moving_average -> cf.pps;
+    cf.clock_info -> tser.xclock_info;
+    ekf.states -> posstamper.states;
+
+    trig.trigger_msg, generic.raw_msg -> tser.packet;
+    tser.timestamped_pkt -> posstamper.ts_pkt;
+
+    posstamper.pos_pkt, ekf.states -> out.stamped_msg;
+
+}

@@ -1,0 +1,10 @@
+target Cpp{
+    files: "test.cpp"
+};
+
+
+main reactor hello {
+    reaction(startup) {=
+        printf("hello\n");
+    =}
+}

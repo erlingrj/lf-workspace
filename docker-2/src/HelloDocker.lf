@@ -1,0 +1,32 @@
+target C {
+  docker: true
+}
+
+reactor Sink {
+
+  input i:int;
+  reaction(i) {=
+    printf("Received %i \n", i->value);
+  =}
+}
+
+
+reactor Source {
+  output o:int;
+
+  timer t(0, 1 sec);
+  
+  state s:int(0);
+
+  reaction(t) -> o {=
+    lf_set(o, self->s++);
+  =}
+}
+
+
+main reactor {
+  sink = new Sink();
+  source = new Source();
+
+  source.o -> sink.i;
+}

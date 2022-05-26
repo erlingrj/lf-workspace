@@ -1,0 +1,18 @@
+target Python
+
+import Filter from "Testing.lf"
+
+
+main reactor {
+    dut = new Filter()
+
+    timer t1(0, 1 msec)
+
+    reaction(t1) -> dut.in1 {=
+        
+    =}
+
+    reaction(dut.out) {=
+
+    =}
+}

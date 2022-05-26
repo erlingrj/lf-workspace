@@ -1,0 +1,39 @@
+target Python
+
+
+reactor Source {
+    output out
+
+    physical action p 
+
+    reaction(p) -> out {==}
+}
+
+reactor Filter {
+    input in1
+    output out
+
+    reaction(in1) -> out {==}
+}
+
+reactor Sink {
+    input in1
+    input in2
+
+    state Internal
+
+    reaction(in1, in2) {==} deadline (10 msec) {=
+
+    =}
+}
+
+
+main reactor {
+    source = new Source()
+    filter = new Filter()
+    sink = new Sink()
+
+    source.out -> sink.in1;
+    source.out -> filter.in1
+    filter.out -> sink.in2;
+}

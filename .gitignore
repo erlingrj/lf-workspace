@@ -1,0 +1,8 @@
+.metadata/
+*bin/
+*src-gen/
+*.project
+*build
+*include
+*lib
+*share
