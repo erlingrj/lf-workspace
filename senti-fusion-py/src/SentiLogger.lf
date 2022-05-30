@@ -1,0 +1,8 @@
+target Python
+
+
+reactor SentiLogger {
+    input sbEnvelope
+    reaction(sbEnvelope) {==}
+}
+

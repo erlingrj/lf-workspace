@@ -1,0 +1,60 @@
+-- The CXX compiler identification is GNU 9.4.0
+-- Check for working CXX compiler: /usr/bin/c++
+-- Check for working CXX compiler: /usr/bin/c++ -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Looking for C++ include pthread.h
+-- Looking for C++ include pthread.h - found
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed
+-- Looking for pthread_create in pthreads
+-- Looking for pthread_create in pthreads - not found
+-- Looking for pthread_create in pthread
+-- Looking for pthread_create in pthread - found
+-- Found Threads: TRUE  
+-- Setting build type to 'Release' as none was specified.
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/erling/dev/lf-workspace/lf-ros/build/reactor-cpp-default
+Scanning dependencies of target reactor-cpp-default
+[ 10%] Building CXX object lib/CMakeFiles/reactor-cpp-default.dir/environment.cc.o
+[ 20%] Building CXX object lib/CMakeFiles/reactor-cpp-default.dir/assert.cc.o
+[ 40%] Building CXX object lib/CMakeFiles/reactor-cpp-default.dir/port.cc.o
+[ 40%] Building CXX object lib/CMakeFiles/reactor-cpp-default.dir/logical_time.cc.o
+[ 50%] Building CXX object lib/CMakeFiles/reactor-cpp-default.dir/reactor.cc.o
+[ 70%] Building CXX object lib/CMakeFiles/reactor-cpp-default.dir/time.cc.o
+[ 70%] Building CXX object lib/CMakeFiles/reactor-cpp-default.dir/action.cc.o
+[ 80%] Building CXX object lib/CMakeFiles/reactor-cpp-default.dir/reaction.cc.o
+[ 90%] Building CXX object lib/CMakeFiles/reactor-cpp-default.dir/scheduler.cc.o
+[100%] Linking CXX shared library libreactor-cpp-default.so
+[100%] Built target reactor-cpp-default
+-- Install configuration: "Release"
+-- Installing: /home/erling/dev/lf-workspace/lf-ros/install/reactor-cpp-default/include/reactor-cpp-default
+-- Installing: /home/erling/dev/lf-workspace/lf-ros/install/reactor-cpp-default/include/reactor-cpp-default/reactor-cpp
+-- Installing: /home/erling/dev/lf-workspace/lf-ros/install/reactor-cpp-default/include/reactor-cpp-default/reactor-cpp/port.hh
+-- Installing: /home/erling/dev/lf-workspace/lf-ros/install/reactor-cpp-default/include/reactor-cpp-default/reactor-cpp/environment.hh
+-- Installing: /home/erling/dev/lf-workspace/lf-ros/install/reactor-cpp-default/include/reactor-cpp-default/reactor-cpp/logging.hh
+-- Installing: /home/erling/dev/lf-workspace/lf-ros/install/reactor-cpp-default/include/reactor-cpp-default/reactor-cpp/reactor.hh
+-- Installing: /home/erling/dev/lf-workspace/lf-ros/install/reactor-cpp-default/include/reactor-cpp-default/reactor-cpp/assert.hh
+-- Installing: /home/erling/dev/lf-workspace/lf-ros/install/reactor-cpp-default/include/reactor-cpp-default/reactor-cpp/impl
+-- Installing: /home/erling/dev/lf-workspace/lf-ros/install/reactor-cpp-default/include/reactor-cpp-default/reactor-cpp/impl/port_impl.hh
+-- Installing: /home/erling/dev/lf-workspace/lf-ros/install/reactor-cpp-default/include/reactor-cpp-default/reactor-cpp/impl/action_impl.hh
+-- Installing: /home/erling/dev/lf-workspace/lf-ros/install/reactor-cpp-default/include/reactor-cpp-default/reactor-cpp/fwd.hh
+-- Installing: /home/erling/dev/lf-workspace/lf-ros/install/reactor-cpp-default/include/reactor-cpp-default/reactor-cpp/action.hh
+-- Installing: /home/erling/dev/lf-workspace/lf-ros/install/reactor-cpp-default/include/reactor-cpp-default/reactor-cpp/semaphore.hh
+-- Installing: /home/erling/dev/lf-workspace/lf-ros/install/reactor-cpp-default/include/reactor-cpp-default/reactor-cpp/value_ptr.hh
+-- Installing: /home/erling/dev/lf-workspace/lf-ros/install/reactor-cpp-default/include/reactor-cpp-default/reactor-cpp/scheduler.hh
+-- Installing: /home/erling/dev/lf-workspace/lf-ros/install/reactor-cpp-default/include/reactor-cpp-default/reactor-cpp/config.hh.in
+-- Installing: /home/erling/dev/lf-workspace/lf-ros/install/reactor-cpp-default/include/reactor-cpp-default/reactor-cpp/trace.hh
+-- Installing: /home/erling/dev/lf-workspace/lf-ros/install/reactor-cpp-default/include/reactor-cpp-default/reactor-cpp/logical_time.hh
+-- Installing: /home/erling/dev/lf-workspace/lf-ros/install/reactor-cpp-default/include/reactor-cpp-default/reactor-cpp/time.hh
+-- Installing: /home/erling/dev/lf-workspace/lf-ros/install/reactor-cpp-default/include/reactor-cpp-default/reactor-cpp/reactor-cpp.hh
+-- Installing: /home/erling/dev/lf-workspace/lf-ros/install/reactor-cpp-default/include/reactor-cpp-default/reactor-cpp/reaction.hh
+-- Installing: /home/erling/dev/lf-workspace/lf-ros/install/reactor-cpp-default/include/reactor-cpp-default/reactor-cpp/config.hh
+-- Installing: /home/erling/dev/lf-workspace/lf-ros/install/reactor-cpp-default/lib/libreactor-cpp-default.so.0.0.1
+-- Installing: /home/erling/dev/lf-workspace/lf-ros/install/reactor-cpp-default/lib/libreactor-cpp-default.so.1
+-- Installing: /home/erling/dev/lf-workspace/lf-ros/install/reactor-cpp-default/lib/libreactor-cpp-default.so
+-- Installing: /home/erling/dev/lf-workspace/lf-ros/install/reactor-cpp-default/share/reactor-cpp-default/cmake/reactor-cpp-defaultConfig.cmake
+-- Installing: /home/erling/dev/lf-workspace/lf-ros/install/reactor-cpp-default/share/reactor-cpp-default/cmake/reactor-cpp-defaultConfig-release.cmake

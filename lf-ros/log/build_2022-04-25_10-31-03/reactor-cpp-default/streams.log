@@ -1,0 +1,72 @@
+[0.017s] Invoking command in '/home/erling/dev/lf-workspace/lf-ros/build/reactor-cpp-default': /usr/bin/cmake /home/erling/dev/lf-workspace/lf-ros/src-gen/reactor-cpp-default -DLF_REACTOR_CPP_SUFFIX=default -DLF_SRC_PKG_PATH=/home/erling/dev/lf-workspace/lf-ros -DCMAKE_INSTALL_PREFIX=/home/erling/dev/lf-workspace/lf-ros/install/reactor-cpp-default
+[0.124s] -- The CXX compiler identification is GNU 9.4.0
+[0.128s] -- Check for working CXX compiler: /usr/bin/c++
+[0.254s] -- Check for working CXX compiler: /usr/bin/c++ -- works
+[0.256s] -- Detecting CXX compiler ABI info
+[0.408s] -- Detecting CXX compiler ABI info - done
+[0.419s] -- Detecting CXX compile features
+[0.419s] -- Detecting CXX compile features - done
+[0.420s] -- Looking for C++ include pthread.h
+[0.566s] -- Looking for C++ include pthread.h - found
+[0.566s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[0.745s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed
+[0.745s] -- Looking for pthread_create in pthreads
+[0.896s] -- Looking for pthread_create in pthreads - not found
+[0.897s] -- Looking for pthread_create in pthread
+[1.060s] -- Looking for pthread_create in pthread - found
+[1.062s] -- Found Threads: TRUE  
+[1.062s] -- Setting build type to 'Release' as none was specified.
+[1.070s] -- Configuring done
+[1.080s] -- Generating done
+[1.081s] CMake Warning:
+[1.081s]   Manually-specified variables were not used by the project:
+[1.081s] 
+[1.082s]     LF_SRC_PKG_PATH
+[1.082s] 
+[1.082s] 
+[1.082s] -- Build files have been written to: /home/erling/dev/lf-workspace/lf-ros/build/reactor-cpp-default
+[1.087s] Invoked command in '/home/erling/dev/lf-workspace/lf-ros/build/reactor-cpp-default' returned '0': /usr/bin/cmake /home/erling/dev/lf-workspace/lf-ros/src-gen/reactor-cpp-default -DLF_REACTOR_CPP_SUFFIX=default -DLF_SRC_PKG_PATH=/home/erling/dev/lf-workspace/lf-ros -DCMAKE_INSTALL_PREFIX=/home/erling/dev/lf-workspace/lf-ros/install/reactor-cpp-default
+[1.093s] Invoking command in '/home/erling/dev/lf-workspace/lf-ros/build/reactor-cpp-default': /usr/bin/cmake --build /home/erling/dev/lf-workspace/lf-ros/build/reactor-cpp-default -- -j20 -l20
+[1.183s] Scanning dependencies of target reactor-cpp-default
+[1.209s] [ 10%] Building CXX object lib/CMakeFiles/reactor-cpp-default.dir/environment.cc.o
+[1.211s] [ 20%] Building CXX object lib/CMakeFiles/reactor-cpp-default.dir/assert.cc.o
+[1.211s] [ 40%] Building CXX object lib/CMakeFiles/reactor-cpp-default.dir/port.cc.o
+[1.211s] [ 40%] Building CXX object lib/CMakeFiles/reactor-cpp-default.dir/logical_time.cc.o
+[1.211s] [ 50%] Building CXX object lib/CMakeFiles/reactor-cpp-default.dir/reactor.cc.o
+[1.217s] [ 70%] Building CXX object lib/CMakeFiles/reactor-cpp-default.dir/time.cc.o
+[1.218s] [ 70%] Building CXX object lib/CMakeFiles/reactor-cpp-default.dir/action.cc.o
+[1.218s] [ 80%] Building CXX object lib/CMakeFiles/reactor-cpp-default.dir/reaction.cc.o
+[1.218s] [ 90%] Building CXX object lib/CMakeFiles/reactor-cpp-default.dir/scheduler.cc.o
+[2.561s] [100%] Linking CXX shared library libreactor-cpp-default.so
+[2.653s] [100%] Built target reactor-cpp-default
+[2.664s] Invoked command in '/home/erling/dev/lf-workspace/lf-ros/build/reactor-cpp-default' returned '0': /usr/bin/cmake --build /home/erling/dev/lf-workspace/lf-ros/build/reactor-cpp-default -- -j20 -l20
+[2.730s] Invoking command in '/home/erling/dev/lf-workspace/lf-ros/build/reactor-cpp-default': /usr/bin/cmake --install /home/erling/dev/lf-workspace/lf-ros/build/reactor-cpp-default
+[2.748s] -- Install configuration: "Release"
+[2.748s] -- Installing: /home/erling/dev/lf-workspace/lf-ros/install/reactor-cpp-default/include/reactor-cpp-default
+[2.749s] -- Installing: /home/erling/dev/lf-workspace/lf-ros/install/reactor-cpp-default/include/reactor-cpp-default/reactor-cpp
+[2.749s] -- Installing: /home/erling/dev/lf-workspace/lf-ros/install/reactor-cpp-default/include/reactor-cpp-default/reactor-cpp/port.hh
+[2.750s] -- Installing: /home/erling/dev/lf-workspace/lf-ros/install/reactor-cpp-default/include/reactor-cpp-default/reactor-cpp/environment.hh
+[2.750s] -- Installing: /home/erling/dev/lf-workspace/lf-ros/install/reactor-cpp-default/include/reactor-cpp-default/reactor-cpp/logging.hh
+[2.750s] -- Installing: /home/erling/dev/lf-workspace/lf-ros/install/reactor-cpp-default/include/reactor-cpp-default/reactor-cpp/reactor.hh
+[2.750s] -- Installing: /home/erling/dev/lf-workspace/lf-ros/install/reactor-cpp-default/include/reactor-cpp-default/reactor-cpp/assert.hh
+[2.751s] -- Installing: /home/erling/dev/lf-workspace/lf-ros/install/reactor-cpp-default/include/reactor-cpp-default/reactor-cpp/impl
+[2.751s] -- Installing: /home/erling/dev/lf-workspace/lf-ros/install/reactor-cpp-default/include/reactor-cpp-default/reactor-cpp/impl/port_impl.hh
+[2.751s] -- Installing: /home/erling/dev/lf-workspace/lf-ros/install/reactor-cpp-default/include/reactor-cpp-default/reactor-cpp/impl/action_impl.hh
+[2.751s] -- Installing: /home/erling/dev/lf-workspace/lf-ros/install/reactor-cpp-default/include/reactor-cpp-default/reactor-cpp/fwd.hh
+[2.751s] -- Installing: /home/erling/dev/lf-workspace/lf-ros/install/reactor-cpp-default/include/reactor-cpp-default/reactor-cpp/action.hh
+[2.751s] -- Installing: /home/erling/dev/lf-workspace/lf-ros/install/reactor-cpp-default/include/reactor-cpp-default/reactor-cpp/semaphore.hh
+[2.752s] -- Installing: /home/erling/dev/lf-workspace/lf-ros/install/reactor-cpp-default/include/reactor-cpp-default/reactor-cpp/value_ptr.hh
+[2.752s] -- Installing: /home/erling/dev/lf-workspace/lf-ros/install/reactor-cpp-default/include/reactor-cpp-default/reactor-cpp/scheduler.hh
+[2.752s] -- Installing: /home/erling/dev/lf-workspace/lf-ros/install/reactor-cpp-default/include/reactor-cpp-default/reactor-cpp/config.hh.in
+[2.752s] -- Installing: /home/erling/dev/lf-workspace/lf-ros/install/reactor-cpp-default/include/reactor-cpp-default/reactor-cpp/trace.hh
+[2.752s] -- Installing: /home/erling/dev/lf-workspace/lf-ros/install/reactor-cpp-default/include/reactor-cpp-default/reactor-cpp/logical_time.hh
+[2.752s] -- Installing: /home/erling/dev/lf-workspace/lf-ros/install/reactor-cpp-default/include/reactor-cpp-default/reactor-cpp/time.hh
+[2.753s] -- Installing: /home/erling/dev/lf-workspace/lf-ros/install/reactor-cpp-default/include/reactor-cpp-default/reactor-cpp/reactor-cpp.hh
+[2.753s] -- Installing: /home/erling/dev/lf-workspace/lf-ros/install/reactor-cpp-default/include/reactor-cpp-default/reactor-cpp/reaction.hh
+[2.753s] -- Installing: /home/erling/dev/lf-workspace/lf-ros/install/reactor-cpp-default/include/reactor-cpp-default/reactor-cpp/config.hh
+[2.753s] -- Installing: /home/erling/dev/lf-workspace/lf-ros/install/reactor-cpp-default/lib/libreactor-cpp-default.so.0.0.1
+[2.753s] -- Installing: /home/erling/dev/lf-workspace/lf-ros/install/reactor-cpp-default/lib/libreactor-cpp-default.so.1
+[2.753s] -- Installing: /home/erling/dev/lf-workspace/lf-ros/install/reactor-cpp-default/lib/libreactor-cpp-default.so
+[2.754s] -- Installing: /home/erling/dev/lf-workspace/lf-ros/install/reactor-cpp-default/share/reactor-cpp-default/cmake/reactor-cpp-defaultConfig.cmake
+[2.754s] -- Installing: /home/erling/dev/lf-workspace/lf-ros/install/reactor-cpp-default/share/reactor-cpp-default/cmake/reactor-cpp-defaultConfig-release.cmake
+[2.756s] Invoked command in '/home/erling/dev/lf-workspace/lf-ros/build/reactor-cpp-default' returned '0': /usr/bin/cmake --install /home/erling/dev/lf-workspace/lf-ros/build/reactor-cpp-default

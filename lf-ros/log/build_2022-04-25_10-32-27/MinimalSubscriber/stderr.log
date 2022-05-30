@@ -1,0 +1,7 @@
+WARNING: Package name "MinimalSubscriber" does not follow the naming conventions. It should start with a lower case letter and only contain lower case letters, digits, underscores, and dashes.
+CMake Warning:
+  Manually-specified variables were not used by the project:
+
+    LF_REACTOR_CPP_SUFFIX
+
+

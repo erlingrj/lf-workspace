@@ -1,0 +1,69 @@
+[0.018s] Invoking command in '/home/erling/dev/lf-workspace/lf-ros/build/MinimalPublisher': CMAKE_PREFIX_PATH=/home/erling/dev/lf-workspace/lf-ros/install/reactor-cpp-default:/opt/ros/rolling LD_LIBRARY_PATH=/home/erling/dev/lf-workspace/lf-ros/install/reactor-cpp-default/lib:${LD_LIBRARY_PATH} /usr/bin/cmake /home/erling/dev/lf-workspace/lf-ros/src-gen/MinimalPublisher -DLF_REACTOR_CPP_SUFFIX=default -DLF_SRC_PKG_PATH=/home/erling/dev/lf-workspace/lf-ros -DCMAKE_INSTALL_PREFIX=/home/erling/dev/lf-workspace/lf-ros/install/MinimalPublisher
+[0.148s] -- The CXX compiler identification is GNU 9.4.0
+[0.161s] -- Check for working CXX compiler: /usr/bin/c++
+[0.312s] -- Check for working CXX compiler: /usr/bin/c++ -- works
+[0.313s] -- Detecting CXX compiler ABI info
+[0.447s] -- Detecting CXX compiler ABI info - done
+[0.456s] -- Detecting CXX compile features
+[0.457s] -- Detecting CXX compile features - done
+[0.458s] -- Found ament_cmake_auto: 1.2.1 (/opt/ros/rolling/share/ament_cmake_auto/cmake)
+[0.612s] -- Found Python3: /usr/bin/python3.8 (found version "3.8.10") found components: Interpreter 
+[0.744s] WARNING: Package name "MinimalPublisher" does not follow the naming conventions. It should start with a lower case letter and only contain lower case letters, digits, underscores, and dashes.
+[0.786s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.790s] -- Found rosidl_adapter: 3.0.1 (/opt/ros/rolling/share/rosidl_adapter/cmake)
+[0.821s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.868s] -- Found rmw_implementation_cmake: 5.1.0 (/opt/ros/rolling/share/rmw_implementation_cmake/cmake)
+[0.870s] -- Found rmw_cyclonedds_cpp: 1.1.2 (/opt/ros/rolling/share/rmw_cyclonedds_cpp/cmake)
+[0.886s] -- Using RMW implementation 'rmw_cyclonedds_cpp' as default
+[1.074s] -- Configuring done
+[1.084s] -- Generating done
+[1.085s] CMake Warning:
+[1.085s]   Manually-specified variables were not used by the project:
+[1.085s] 
+[1.085s]     LF_REACTOR_CPP_SUFFIX
+[1.085s] 
+[1.085s] 
+[1.086s] -- Build files have been written to: /home/erling/dev/lf-workspace/lf-ros/build/MinimalPublisher
+[1.091s] Invoked command in '/home/erling/dev/lf-workspace/lf-ros/build/MinimalPublisher' returned '0': CMAKE_PREFIX_PATH=/home/erling/dev/lf-workspace/lf-ros/install/reactor-cpp-default:/opt/ros/rolling LD_LIBRARY_PATH=/home/erling/dev/lf-workspace/lf-ros/install/reactor-cpp-default/lib:${LD_LIBRARY_PATH} /usr/bin/cmake /home/erling/dev/lf-workspace/lf-ros/src-gen/MinimalPublisher -DLF_REACTOR_CPP_SUFFIX=default -DLF_SRC_PKG_PATH=/home/erling/dev/lf-workspace/lf-ros -DCMAKE_INSTALL_PREFIX=/home/erling/dev/lf-workspace/lf-ros/install/MinimalPublisher
+[1.096s] Invoking command in '/home/erling/dev/lf-workspace/lf-ros/build/MinimalPublisher': CMAKE_PREFIX_PATH=/home/erling/dev/lf-workspace/lf-ros/install/reactor-cpp-default:/opt/ros/rolling LD_LIBRARY_PATH=/home/erling/dev/lf-workspace/lf-ros/install/reactor-cpp-default/lib:${LD_LIBRARY_PATH} /usr/bin/cmake --build /home/erling/dev/lf-workspace/lf-ros/build/MinimalPublisher -- -j20 -l20
+[1.192s] Scanning dependencies of target MinimalPublisher_exe
+[1.209s] Scanning dependencies of target MinimalPublisher
+[1.218s] [ 16%] Building CXX object CMakeFiles/MinimalPublisher_exe.dir/rclcpp_components/node_main_MinimalPublisher_exe.cpp.o
+[1.241s] [ 33%] Building CXX object CMakeFiles/MinimalPublisher.dir/src/MinimalPublisherNode.cc.o
+[1.242s] [ 50%] Building CXX object CMakeFiles/MinimalPublisher.dir/src/MinimalPublisher/MinimalPublisher.cc.o
+[1.243s] [ 66%] Building CXX object CMakeFiles/MinimalPublisher.dir/src/MinimalPublisher/_lf_preamble.cc.o
+[3.994s] [ 83%] Linking CXX executable MinimalPublisher_exe
+[4.118s] [ 83%] Built target MinimalPublisher_exe
+[5.463s] [100%] Linking CXX shared library libMinimalPublisher.so
+[5.599s] [100%] Built target MinimalPublisher
+[5.617s] Invoked command in '/home/erling/dev/lf-workspace/lf-ros/build/MinimalPublisher' returned '0': CMAKE_PREFIX_PATH=/home/erling/dev/lf-workspace/lf-ros/install/reactor-cpp-default:/opt/ros/rolling LD_LIBRARY_PATH=/home/erling/dev/lf-workspace/lf-ros/install/reactor-cpp-default/lib:${LD_LIBRARY_PATH} /usr/bin/cmake --build /home/erling/dev/lf-workspace/lf-ros/build/MinimalPublisher -- -j20 -l20
+[5.678s] Invoking command in '/home/erling/dev/lf-workspace/lf-ros/build/MinimalPublisher': CMAKE_PREFIX_PATH=/home/erling/dev/lf-workspace/lf-ros/install/reactor-cpp-default:/opt/ros/rolling LD_LIBRARY_PATH=/home/erling/dev/lf-workspace/lf-ros/install/reactor-cpp-default/lib:${LD_LIBRARY_PATH} /usr/bin/cmake --install /home/erling/dev/lf-workspace/lf-ros/build/MinimalPublisher
+[5.695s] -- Install configuration: "Release"
+[5.695s] -- Installing: /home/erling/dev/lf-workspace/lf-ros/install/MinimalPublisher/lib/MinimalPublisher/MinimalPublisher_exe
+[5.695s] -- Set runtime path of "/home/erling/dev/lf-workspace/lf-ros/install/MinimalPublisher/lib/MinimalPublisher/MinimalPublisher_exe" to ""
+[5.696s] -- Installing: /home/erling/dev/lf-workspace/lf-ros/install/MinimalPublisher/include
+[5.696s] -- Installing: /home/erling/dev/lf-workspace/lf-ros/install/MinimalPublisher/include/MinimalPublisherNode.hh
+[5.696s] -- Installing: /home/erling/dev/lf-workspace/lf-ros/install/MinimalPublisher/share/MinimalPublisher/environment/library_path.sh
+[5.696s] -- Installing: /home/erling/dev/lf-workspace/lf-ros/install/MinimalPublisher/share/MinimalPublisher/environment/library_path.dsv
+[5.697s] -- Installing: /home/erling/dev/lf-workspace/lf-ros/install/MinimalPublisher/lib/libMinimalPublisher.so
+[5.697s] -- Set runtime path of "/home/erling/dev/lf-workspace/lf-ros/install/MinimalPublisher/lib/libMinimalPublisher.so" to ""
+[5.697s] -- Installing: /home/erling/dev/lf-workspace/lf-ros/install/MinimalPublisher/share/ament_index/resource_index/package_run_dependencies/MinimalPublisher
+[5.697s] -- Installing: /home/erling/dev/lf-workspace/lf-ros/install/MinimalPublisher/share/ament_index/resource_index/parent_prefix_path/MinimalPublisher
+[5.698s] -- Installing: /home/erling/dev/lf-workspace/lf-ros/install/MinimalPublisher/share/MinimalPublisher/environment/ament_prefix_path.sh
+[5.698s] -- Installing: /home/erling/dev/lf-workspace/lf-ros/install/MinimalPublisher/share/MinimalPublisher/environment/ament_prefix_path.dsv
+[5.698s] -- Installing: /home/erling/dev/lf-workspace/lf-ros/install/MinimalPublisher/share/MinimalPublisher/environment/path.sh
+[5.699s] -- Installing: /home/erling/dev/lf-workspace/lf-ros/install/MinimalPublisher/share/MinimalPublisher/environment/path.dsv
+[5.699s] -- Installing: /home/erling/dev/lf-workspace/lf-ros/install/MinimalPublisher/share/MinimalPublisher/local_setup.bash
+[5.699s] -- Installing: /home/erling/dev/lf-workspace/lf-ros/install/MinimalPublisher/share/MinimalPublisher/local_setup.sh
+[5.699s] -- Installing: /home/erling/dev/lf-workspace/lf-ros/install/MinimalPublisher/share/MinimalPublisher/local_setup.zsh
+[5.700s] -- Installing: /home/erling/dev/lf-workspace/lf-ros/install/MinimalPublisher/share/MinimalPublisher/local_setup.dsv
+[5.700s] -- Installing: /home/erling/dev/lf-workspace/lf-ros/install/MinimalPublisher/share/MinimalPublisher/package.dsv
+[5.700s] -- Installing: /home/erling/dev/lf-workspace/lf-ros/install/MinimalPublisher/share/ament_index/resource_index/packages/MinimalPublisher
+[5.700s] -- Installing: /home/erling/dev/lf-workspace/lf-ros/install/MinimalPublisher/share/ament_index/resource_index/rclcpp_components/MinimalPublisher
+[5.701s] -- Installing: /home/erling/dev/lf-workspace/lf-ros/install/MinimalPublisher/share/MinimalPublisher/cmake/ament_cmake_export_dependencies-extras.cmake
+[5.701s] -- Installing: /home/erling/dev/lf-workspace/lf-ros/install/MinimalPublisher/share/MinimalPublisher/cmake/ament_cmake_export_include_directories-extras.cmake
+[5.701s] -- Installing: /home/erling/dev/lf-workspace/lf-ros/install/MinimalPublisher/share/MinimalPublisher/cmake/ament_cmake_export_libraries-extras.cmake
+[5.701s] -- Installing: /home/erling/dev/lf-workspace/lf-ros/install/MinimalPublisher/share/MinimalPublisher/cmake/MinimalPublisherConfig.cmake
+[5.701s] -- Installing: /home/erling/dev/lf-workspace/lf-ros/install/MinimalPublisher/share/MinimalPublisher/cmake/MinimalPublisherConfig-version.cmake
+[5.701s] -- Installing: /home/erling/dev/lf-workspace/lf-ros/install/MinimalPublisher/share/MinimalPublisher/package.xml
+[5.706s] Invoked command in '/home/erling/dev/lf-workspace/lf-ros/build/MinimalPublisher' returned '0': CMAKE_PREFIX_PATH=/home/erling/dev/lf-workspace/lf-ros/install/reactor-cpp-default:/opt/ros/rolling LD_LIBRARY_PATH=/home/erling/dev/lf-workspace/lf-ros/install/reactor-cpp-default/lib:${LD_LIBRARY_PATH} /usr/bin/cmake --install /home/erling/dev/lf-workspace/lf-ros/build/MinimalPublisher

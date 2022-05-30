@@ -1,0 +1,48 @@
+target Python
+
+
+reactor ROSBridge {
+
+    input imuMsg
+    input gnssMsg
+    input rawMsg
+    input triggerMsg
+}
+
+reactor ROS2Bridge {
+
+    input imuMsg
+    input gnssMsg
+    input rawMsg
+    input triggerMsg
+}
+
+reactor UDPBridge {
+    input imuMsg
+    input gnssMsg
+    input rawMsg
+    input triggerMsg
+}
+
+
+reactor SentiBridge {
+    input imuMsg
+    input gnssMsg
+    input rawMsg
+    input triggerMsg
+    input robotPose
+    input robotPos
+
+    ros = new ROSBridge()
+    ros2 = new ROS2Bridge()
+    udp = new UDPBridge()
+
+
+    reaction(imuMsg, gnssMsg, rawMsg, triggerMsg) -> 
+        ros.imuMsg, ros.gnssMsg, ros.rawMsg, ros.triggerMsg,
+        ros2.imuMsg, ros2.gnssMsg, ros2.rawMsg, ros2.triggerMsg,
+        udp.imuMsg, udp.gnssMsg, udp.rawMsg, udp.triggerMsg {=
+
+        =}
+
+}

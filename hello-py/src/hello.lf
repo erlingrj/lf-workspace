@@ -1,0 +1,36 @@
+target Python
+
+
+reactor R1 {
+    input in1;
+    output out1;
+
+    reaction(in1) -> out1 {=
+        out1.set(1)
+    =}
+
+}
+
+reactor R2{
+    input in1;
+    output out1;
+
+    r1 = new R1();
+    in1 -> r1.in1;
+    r1.out1 -> out1;
+
+
+    reaction(in1) -> out1 {=
+        
+    =}
+}
+
+
+main reactor {
+    r1 = new R1()
+    r2 = new R1()
+
+    timer t(0, 1 sec)
+
+
+}

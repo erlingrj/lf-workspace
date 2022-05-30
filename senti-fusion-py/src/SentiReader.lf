@@ -1,0 +1,186 @@
+target Python
+
+import SentiLogger from "SentiLogger.lf"
+
+
+reactor Adapter {
+    output sbEnvelope
+
+    eth = new EthernetAdapter()
+    usb = new UsbAdapter()
+    log = new LogAdapter()
+
+    reaction(eth.sbEnvelope, usb.sbEnvelope, log.sbEnvelope) -> sbEnvelope {==}
+}
+
+reactor EthernetAdapter(port(0)) {
+
+    output sbEnvelope
+    physical action ethFrameRecv
+
+    reaction(startup) {==}
+
+    reaction(ethFrameRecv) -> sbEnvelope {==}
+
+}
+
+reactor UsbAdapter(dev("/dev/ttySentiboard02")) {
+
+    output sbEnvelope
+    physical action ethFrameRecv
+
+    reaction(startup) {==}
+    reaction(ethFrameRecv) -> sbEnvelope {==}
+}
+
+reactor LogAdapter(logpath("log.log")) {
+    output sbEnvelope
+    logical action loggedFrame
+
+    reaction(loggedFrame) -> sbEnvelope {==}
+
+}
+
+reactor ImuParser {
+
+    input sbEnvelope
+    output imuMsg
+
+}
+
+reactor Stim318Parser {
+
+    input sbEnvelope
+    output imuMsg
+    reaction(sbEnvelope) -> imuMsg {==}
+}
+reactor Adis16488Parser {
+
+    input sbEnvelope
+    output imuMsg
+    reaction(sbEnvelope) -> imuMsg {==}
+}
+
+reactor GnssParser {
+    input sbEnvelope
+    output gnssMsg
+    
+    f9p = new UbloxF9PParser()
+    f9t = new UbloxF9TParser()
+
+    reaction(sbEnvelope) -> f9p.sbEnvelope, f9t.sbEnvelope {==}
+}
+
+reactor TriggerParser {
+    input sbEnvelope
+    output triggerMsg
+}
+
+reactor RawParser {
+    input sbEnvelope
+    output rawMsg
+}
+
+reactor UbloxF9PParser {
+
+    input sbEnvelope
+    output gnssMsg
+    reaction(sbEnvelope) -> gnssMsg {==}
+}
+
+reactor UbloxF9TParser {
+
+    input sbEnvelope
+    output gnssMsg
+    reaction(sbEnvelope) -> gnssMsg{==}
+}
+
+
+reactor SentiParser {
+    input sbEnvelope
+    output imuMsg
+    output gnssMsg
+    output triggerMsg
+    output rawMsg
+
+    gnss = new GnssParser()
+    imu = new ImuParser()
+    trigger = new TriggerParser()
+    raw = new RawParser()
+
+    reaction(sbEnvelope) -> gnss.sbEnvelope, imu.sbEnvelope, trigger.sbEnvelope, raw.sbEnvelope {==}
+    
+    gnss.gnssMsg -> gnssMsg
+    imu.imuMsg -> imuMsg
+    trigger.triggerMsg -> triggerMsg
+    raw.rawMsg -> rawMsg
+
+}
+
+
+reactor GnssFilter {
+    input gnssMsg
+    output fGnssMsg
+
+    reaction(gnssMsg) -> fGnssMsg {==}
+}
+
+
+reactor ImuFilter {
+    input imuMsg
+    output fImuMsg
+
+    ma = new ImuMovingAverageFilter()
+    ds = new ImuDownsamplingFilter()
+
+    reaction(imuMsg) -> ma.imuMsg, ds.imuMsg {==}
+
+    reaction(ma.fImuMsg) -> fImuMsg, ds.imuMsg {==}
+
+    reaction(ds.fImuMsg) -> fImuMsg {==}
+}
+
+reactor ImuMovingAverageFilter {
+    input imuMsg
+    output fImuMsg
+
+    reaction(imuMsg) -> fImuMsg {==}
+}
+
+reactor ImuDownsamplingFilter {
+
+    input imuMsg
+    output fImuMsg
+
+    reaction(imuMsg) -> fImuMsg {==}
+}
+
+
+reactor SentiReader {
+    output imuMsg
+    output gnssMsg
+    output rawMsg
+    output triggerMsg 
+
+    parser = new SentiParser()
+    adapter = new Adapter()
+    imuFilter = new ImuFilter()
+    gnssFilter = new GnssFilter()
+    logger = new SentiLogger()
+
+
+    adapter.sbEnvelope -> parser.sbEnvelope
+    parser.imuMsg -> imuFilter.imuMsg
+    parser.gnssMsg -> gnssFilter.gnssMsg
+
+    adapter.sbEnvelope -> logger.sbEnvelope
+
+    imuFilter.fImuMsg -> imuMsg 
+    gnssFilter.fGnssMsg -> gnssMsg
+    parser.rawMsg -> rawMsg
+    parser.triggerMsg -> triggerMsg
+    
+    reaction(startup) {=     
+        print("Starting SentiReader. Fetching config and doing stuff")
+    =}
+}

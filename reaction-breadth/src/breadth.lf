@@ -1,0 +1,35 @@
+target C {
+    workers: 10
+};
+
+reactor Source {
+    timer t(0, 1 ms);
+    output o1:int;
+
+    reaction(t) -> o1 {==}
+}
+
+reactor Filter {
+    input i1:int;
+    output o1:int;
+    reaction(i1) -> o1 {==}
+    reaction(i1) {==}
+
+}
+
+reactor Sink {
+    input i1:int;
+    reaction(i1) {==}
+}
+
+
+main reactor {
+    so = new[3] Source()
+    f = new[3] Filter()
+    si = new[3] Sink()
+
+    so.o1 -> f.i1;
+    f.o1 -> si.i1;
+
+
+}

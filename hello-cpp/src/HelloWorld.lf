@@ -1,0 +1,37 @@
+target Cpp
+
+/**
+ * Print "Hello World!" in C++.
+ */
+ 
+ 
+reactor sender {
+    
+    timer t(0, 1 sec);
+    output out:int;
+    
+    reaction(t) -> out{=
+        out.set(1);
+    =}
+    
+    reaction(t) -> out {=
+        out.set(2);
+    =}
+}
+
+reactor recv {
+    input in:int;
+    
+    reaction(in) {=
+        std::cout <<"Got: " <<*(in.get()) <<std::endl;
+    =}
+}
+ 
+main reactor {
+    s = new sender();
+    r = new recv();
+    
+    s.out -> r.in;
+    
+
+}

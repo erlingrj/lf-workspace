@@ -1,0 +1,69 @@
+[0.019s] Invoking command in '/home/erling/dev/lf-workspace/lf-ros/build/MinimalSubscriber': CMAKE_PREFIX_PATH=/home/erling/dev/lf-workspace/lf-ros/install/reactor-cpp-default:/opt/ros/rolling LD_LIBRARY_PATH=/home/erling/dev/lf-workspace/lf-ros/install/reactor-cpp-default/lib:${LD_LIBRARY_PATH} /usr/bin/cmake /home/erling/dev/lf-workspace/lf-ros/src-gen/MinimalSubscriber -DLF_REACTOR_CPP_SUFFIX=default -DLF_SRC_PKG_PATH=/home/erling/dev/lf-workspace/lf-ros -DCMAKE_INSTALL_PREFIX=/home/erling/dev/lf-workspace/lf-ros/install/MinimalSubscriber
+[0.144s] -- The CXX compiler identification is GNU 9.4.0
+[0.148s] -- Check for working CXX compiler: /usr/bin/c++
+[0.294s] -- Check for working CXX compiler: /usr/bin/c++ -- works
+[0.296s] -- Detecting CXX compiler ABI info
+[0.445s] -- Detecting CXX compiler ABI info - done
+[0.470s] -- Detecting CXX compile features
+[0.471s] -- Detecting CXX compile features - done
+[0.473s] -- Found ament_cmake_auto: 1.2.1 (/opt/ros/rolling/share/ament_cmake_auto/cmake)
+[0.639s] -- Found Python3: /usr/bin/python3.8 (found version "3.8.10") found components: Interpreter 
+[0.762s] WARNING: Package name "MinimalSubscriber" does not follow the naming conventions. It should start with a lower case letter and only contain lower case letters, digits, underscores, and dashes.
+[0.802s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.806s] -- Found rosidl_adapter: 3.0.1 (/opt/ros/rolling/share/rosidl_adapter/cmake)
+[0.836s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.885s] -- Found rmw_implementation_cmake: 5.1.0 (/opt/ros/rolling/share/rmw_implementation_cmake/cmake)
+[0.886s] -- Found rmw_cyclonedds_cpp: 1.1.2 (/opt/ros/rolling/share/rmw_cyclonedds_cpp/cmake)
+[0.903s] -- Using RMW implementation 'rmw_cyclonedds_cpp' as default
+[1.089s] -- Configuring done
+[1.099s] -- Generating done
+[1.100s] CMake Warning:
+[1.100s]   Manually-specified variables were not used by the project:
+[1.101s] 
+[1.101s]     LF_REACTOR_CPP_SUFFIX
+[1.101s] 
+[1.101s] 
+[1.101s] -- Build files have been written to: /home/erling/dev/lf-workspace/lf-ros/build/MinimalSubscriber
+[1.106s] Invoked command in '/home/erling/dev/lf-workspace/lf-ros/build/MinimalSubscriber' returned '0': CMAKE_PREFIX_PATH=/home/erling/dev/lf-workspace/lf-ros/install/reactor-cpp-default:/opt/ros/rolling LD_LIBRARY_PATH=/home/erling/dev/lf-workspace/lf-ros/install/reactor-cpp-default/lib:${LD_LIBRARY_PATH} /usr/bin/cmake /home/erling/dev/lf-workspace/lf-ros/src-gen/MinimalSubscriber -DLF_REACTOR_CPP_SUFFIX=default -DLF_SRC_PKG_PATH=/home/erling/dev/lf-workspace/lf-ros -DCMAKE_INSTALL_PREFIX=/home/erling/dev/lf-workspace/lf-ros/install/MinimalSubscriber
+[1.110s] Invoking command in '/home/erling/dev/lf-workspace/lf-ros/build/MinimalSubscriber': CMAKE_PREFIX_PATH=/home/erling/dev/lf-workspace/lf-ros/install/reactor-cpp-default:/opt/ros/rolling LD_LIBRARY_PATH=/home/erling/dev/lf-workspace/lf-ros/install/reactor-cpp-default/lib:${LD_LIBRARY_PATH} /usr/bin/cmake --build /home/erling/dev/lf-workspace/lf-ros/build/MinimalSubscriber -- -j20 -l20
+[1.186s] Scanning dependencies of target MinimalSubscriber_exe
+[1.211s] [ 16%] Building CXX object CMakeFiles/MinimalSubscriber_exe.dir/rclcpp_components/node_main_MinimalSubscriber_exe.cpp.o
+[1.222s] Scanning dependencies of target MinimalSubscriber
+[1.247s] [ 33%] Building CXX object CMakeFiles/MinimalSubscriber.dir/src/MinimalSubscriber/MinimalSubscriber.cc.o
+[1.247s] [ 50%] Building CXX object CMakeFiles/MinimalSubscriber.dir/src/MinimalSubscriber/_lf_preamble.cc.o
+[1.252s] [ 66%] Building CXX object CMakeFiles/MinimalSubscriber.dir/src/MinimalSubscriberNode.cc.o
+[3.978s] [ 83%] Linking CXX executable MinimalSubscriber_exe
+[4.122s] [ 83%] Built target MinimalSubscriber_exe
+[9.522s] [100%] Linking CXX shared library libMinimalSubscriber.so
+[9.680s] [100%] Built target MinimalSubscriber
+[9.694s] Invoked command in '/home/erling/dev/lf-workspace/lf-ros/build/MinimalSubscriber' returned '0': CMAKE_PREFIX_PATH=/home/erling/dev/lf-workspace/lf-ros/install/reactor-cpp-default:/opt/ros/rolling LD_LIBRARY_PATH=/home/erling/dev/lf-workspace/lf-ros/install/reactor-cpp-default/lib:${LD_LIBRARY_PATH} /usr/bin/cmake --build /home/erling/dev/lf-workspace/lf-ros/build/MinimalSubscriber -- -j20 -l20
+[9.757s] Invoking command in '/home/erling/dev/lf-workspace/lf-ros/build/MinimalSubscriber': CMAKE_PREFIX_PATH=/home/erling/dev/lf-workspace/lf-ros/install/reactor-cpp-default:/opt/ros/rolling LD_LIBRARY_PATH=/home/erling/dev/lf-workspace/lf-ros/install/reactor-cpp-default/lib:${LD_LIBRARY_PATH} /usr/bin/cmake --install /home/erling/dev/lf-workspace/lf-ros/build/MinimalSubscriber
+[9.775s] -- Install configuration: "Release"
+[9.775s] -- Installing: /home/erling/dev/lf-workspace/lf-ros/install/MinimalSubscriber/lib/MinimalSubscriber/MinimalSubscriber_exe
+[9.776s] -- Set runtime path of "/home/erling/dev/lf-workspace/lf-ros/install/MinimalSubscriber/lib/MinimalSubscriber/MinimalSubscriber_exe" to ""
+[9.776s] -- Installing: /home/erling/dev/lf-workspace/lf-ros/install/MinimalSubscriber/include
+[9.777s] -- Installing: /home/erling/dev/lf-workspace/lf-ros/install/MinimalSubscriber/include/MinimalSubscriberNode.hh
+[9.777s] -- Installing: /home/erling/dev/lf-workspace/lf-ros/install/MinimalSubscriber/share/MinimalSubscriber/environment/library_path.sh
+[9.777s] -- Installing: /home/erling/dev/lf-workspace/lf-ros/install/MinimalSubscriber/share/MinimalSubscriber/environment/library_path.dsv
+[9.777s] -- Installing: /home/erling/dev/lf-workspace/lf-ros/install/MinimalSubscriber/lib/libMinimalSubscriber.so
+[9.779s] -- Set runtime path of "/home/erling/dev/lf-workspace/lf-ros/install/MinimalSubscriber/lib/libMinimalSubscriber.so" to ""
+[9.779s] -- Installing: /home/erling/dev/lf-workspace/lf-ros/install/MinimalSubscriber/share/ament_index/resource_index/package_run_dependencies/MinimalSubscriber
+[9.780s] -- Installing: /home/erling/dev/lf-workspace/lf-ros/install/MinimalSubscriber/share/ament_index/resource_index/parent_prefix_path/MinimalSubscriber
+[9.780s] -- Installing: /home/erling/dev/lf-workspace/lf-ros/install/MinimalSubscriber/share/MinimalSubscriber/environment/ament_prefix_path.sh
+[9.780s] -- Installing: /home/erling/dev/lf-workspace/lf-ros/install/MinimalSubscriber/share/MinimalSubscriber/environment/ament_prefix_path.dsv
+[9.781s] -- Installing: /home/erling/dev/lf-workspace/lf-ros/install/MinimalSubscriber/share/MinimalSubscriber/environment/path.sh
+[9.781s] -- Installing: /home/erling/dev/lf-workspace/lf-ros/install/MinimalSubscriber/share/MinimalSubscriber/environment/path.dsv
+[9.781s] -- Installing: /home/erling/dev/lf-workspace/lf-ros/install/MinimalSubscriber/share/MinimalSubscriber/local_setup.bash
+[9.781s] -- Installing: /home/erling/dev/lf-workspace/lf-ros/install/MinimalSubscriber/share/MinimalSubscriber/local_setup.sh
+[9.782s] -- Installing: /home/erling/dev/lf-workspace/lf-ros/install/MinimalSubscriber/share/MinimalSubscriber/local_setup.zsh
+[9.782s] -- Installing: /home/erling/dev/lf-workspace/lf-ros/install/MinimalSubscriber/share/MinimalSubscriber/local_setup.dsv
+[9.782s] -- Installing: /home/erling/dev/lf-workspace/lf-ros/install/MinimalSubscriber/share/MinimalSubscriber/package.dsv
+[9.783s] -- Installing: /home/erling/dev/lf-workspace/lf-ros/install/MinimalSubscriber/share/ament_index/resource_index/packages/MinimalSubscriber
+[9.783s] -- Installing: /home/erling/dev/lf-workspace/lf-ros/install/MinimalSubscriber/share/ament_index/resource_index/rclcpp_components/MinimalSubscriber
+[9.783s] -- Installing: /home/erling/dev/lf-workspace/lf-ros/install/MinimalSubscriber/share/MinimalSubscriber/cmake/ament_cmake_export_dependencies-extras.cmake
+[9.784s] -- Installing: /home/erling/dev/lf-workspace/lf-ros/install/MinimalSubscriber/share/MinimalSubscriber/cmake/ament_cmake_export_include_directories-extras.cmake
+[9.784s] -- Installing: /home/erling/dev/lf-workspace/lf-ros/install/MinimalSubscriber/share/MinimalSubscriber/cmake/ament_cmake_export_libraries-extras.cmake
+[9.784s] -- Installing: /home/erling/dev/lf-workspace/lf-ros/install/MinimalSubscriber/share/MinimalSubscriber/cmake/MinimalSubscriberConfig.cmake
+[9.785s] -- Installing: /home/erling/dev/lf-workspace/lf-ros/install/MinimalSubscriber/share/MinimalSubscriber/cmake/MinimalSubscriberConfig-version.cmake
+[9.785s] -- Installing: /home/erling/dev/lf-workspace/lf-ros/install/MinimalSubscriber/share/MinimalSubscriber/package.xml
+[9.790s] Invoked command in '/home/erling/dev/lf-workspace/lf-ros/build/MinimalSubscriber' returned '0': CMAKE_PREFIX_PATH=/home/erling/dev/lf-workspace/lf-ros/install/reactor-cpp-default:/opt/ros/rolling LD_LIBRARY_PATH=/home/erling/dev/lf-workspace/lf-ros/install/reactor-cpp-default/lib:${LD_LIBRARY_PATH} /usr/bin/cmake --install /home/erling/dev/lf-workspace/lf-ros/build/MinimalSubscriber

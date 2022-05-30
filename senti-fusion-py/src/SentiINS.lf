@@ -1,0 +1,45 @@
+target Python
+
+reactor MEKF {
+    input imuMsg
+    input navPvtMsg
+    input relPosMsg
+    input velMsg
+    output robotPos
+    output robotPose
+
+    reaction(imuMsg) -> robotPos, robotPose {==}
+    reaction(navPvtMsg) -> robotPos, robotPose {==}
+    reaction(relPosMsg) -> robotPos, robotPose {==}
+    reaction(velMsg) -> robotPos, robotPose {==}
+}
+
+reactor MVP {
+    input navPvtMsg
+    input relPosMsg
+    output robotPos
+    output robotPose
+
+    reaction(navPvtMsg) -> robotPos, robotPose {==}
+    reaction(relPosMsg) -> robotPos, robotPose {==}
+
+}
+
+reactor SentiIns {
+    input imuMsg
+    input gnssMsg
+    output robotPos
+    output robotPose
+
+    mekf = new MEKF()
+    mvp = new MVP()
+
+
+    reaction(imuMsg, gnssMsg) ->
+        mekf.imuMsg, mekf.navPvtMsg, mekf.relPosMsg, mekf.velMsg,
+        mvp.navPvtMsg, mvp.relPosMsg {==}
+
+
+    reaction(mekf.robotPos, mekf.robotPose, mvp.robotPos, mvp.robotPose) ->
+        robotPos, robotPose {==}
+}

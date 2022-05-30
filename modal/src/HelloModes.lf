@@ -1,0 +1,8 @@
+target C;
+
+
+main reactor {
+
+    initial mode a;
+    
+}

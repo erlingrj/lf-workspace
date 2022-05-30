@@ -1,0 +1,15 @@
+target Python 
+
+
+reactor SentiViz {
+    input gnssMsg
+    input imuMsg
+    input rawMsg
+    input triggerMsg
+    input robotPos
+    input robotPose
+
+    reaction(gnssMsg, imuMsg, rawMsg, triggerMsg) {=
+        
+    =}
+}

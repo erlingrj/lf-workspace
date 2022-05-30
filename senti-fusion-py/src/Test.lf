@@ -1,0 +1,10 @@
+target Python;
+
+main reactor {
+    state a()
+
+    reaction(startup) {=
+        print("hello world\n")
+    =}
+    
+}

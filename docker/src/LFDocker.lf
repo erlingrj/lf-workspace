@@ -1,0 +1,6 @@
+target C {
+    docker: {FROM: "alpine:latest"}
+};
+
+
+

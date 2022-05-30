@@ -1,0 +1,33 @@
+[0.019s] Invoking command in '/home/erling/dev/lf-workspace/lf-ros/build/reactor-cpp-default': /usr/bin/cmake --build /home/erling/dev/lf-workspace/lf-ros/build/reactor-cpp-default -- -j20 -l20
+[0.088s] [100%] Built target reactor-cpp-default
+[0.111s] Invoked command in '/home/erling/dev/lf-workspace/lf-ros/build/reactor-cpp-default' returned '0': /usr/bin/cmake --build /home/erling/dev/lf-workspace/lf-ros/build/reactor-cpp-default -- -j20 -l20
+[0.173s] Invoking command in '/home/erling/dev/lf-workspace/lf-ros/build/reactor-cpp-default': /usr/bin/cmake --install /home/erling/dev/lf-workspace/lf-ros/build/reactor-cpp-default
+[0.192s] -- Install configuration: "Release"
+[0.192s] -- Up-to-date: /home/erling/dev/lf-workspace/lf-ros/install/reactor-cpp-default/include/reactor-cpp-default
+[0.192s] -- Up-to-date: /home/erling/dev/lf-workspace/lf-ros/install/reactor-cpp-default/include/reactor-cpp-default/reactor-cpp
+[0.193s] -- Up-to-date: /home/erling/dev/lf-workspace/lf-ros/install/reactor-cpp-default/include/reactor-cpp-default/reactor-cpp/port.hh
+[0.193s] -- Up-to-date: /home/erling/dev/lf-workspace/lf-ros/install/reactor-cpp-default/include/reactor-cpp-default/reactor-cpp/environment.hh
+[0.193s] -- Up-to-date: /home/erling/dev/lf-workspace/lf-ros/install/reactor-cpp-default/include/reactor-cpp-default/reactor-cpp/logging.hh
+[0.193s] -- Up-to-date: /home/erling/dev/lf-workspace/lf-ros/install/reactor-cpp-default/include/reactor-cpp-default/reactor-cpp/reactor.hh
+[0.193s] -- Up-to-date: /home/erling/dev/lf-workspace/lf-ros/install/reactor-cpp-default/include/reactor-cpp-default/reactor-cpp/assert.hh
+[0.193s] -- Up-to-date: /home/erling/dev/lf-workspace/lf-ros/install/reactor-cpp-default/include/reactor-cpp-default/reactor-cpp/impl
+[0.194s] -- Up-to-date: /home/erling/dev/lf-workspace/lf-ros/install/reactor-cpp-default/include/reactor-cpp-default/reactor-cpp/impl/port_impl.hh
+[0.194s] -- Up-to-date: /home/erling/dev/lf-workspace/lf-ros/install/reactor-cpp-default/include/reactor-cpp-default/reactor-cpp/impl/action_impl.hh
+[0.196s] -- Up-to-date: /home/erling/dev/lf-workspace/lf-ros/install/reactor-cpp-default/include/reactor-cpp-default/reactor-cpp/fwd.hh
+[0.198s] -- Up-to-date: /home/erling/dev/lf-workspace/lf-ros/install/reactor-cpp-default/include/reactor-cpp-default/reactor-cpp/action.hh
+[0.198s] -- Up-to-date: /home/erling/dev/lf-workspace/lf-ros/install/reactor-cpp-default/include/reactor-cpp-default/reactor-cpp/semaphore.hh
+[0.199s] -- Up-to-date: /home/erling/dev/lf-workspace/lf-ros/install/reactor-cpp-default/include/reactor-cpp-default/reactor-cpp/value_ptr.hh
+[0.199s] -- Up-to-date: /home/erling/dev/lf-workspace/lf-ros/install/reactor-cpp-default/include/reactor-cpp-default/reactor-cpp/scheduler.hh
+[0.200s] -- Up-to-date: /home/erling/dev/lf-workspace/lf-ros/install/reactor-cpp-default/include/reactor-cpp-default/reactor-cpp/config.hh.in
+[0.200s] -- Up-to-date: /home/erling/dev/lf-workspace/lf-ros/install/reactor-cpp-default/include/reactor-cpp-default/reactor-cpp/trace.hh
+[0.201s] -- Up-to-date: /home/erling/dev/lf-workspace/lf-ros/install/reactor-cpp-default/include/reactor-cpp-default/reactor-cpp/logical_time.hh
+[0.202s] -- Up-to-date: /home/erling/dev/lf-workspace/lf-ros/install/reactor-cpp-default/include/reactor-cpp-default/reactor-cpp/time.hh
+[0.202s] -- Up-to-date: /home/erling/dev/lf-workspace/lf-ros/install/reactor-cpp-default/include/reactor-cpp-default/reactor-cpp/reactor-cpp.hh
+[0.202s] -- Up-to-date: /home/erling/dev/lf-workspace/lf-ros/install/reactor-cpp-default/include/reactor-cpp-default/reactor-cpp/reaction.hh
+[0.203s] -- Up-to-date: /home/erling/dev/lf-workspace/lf-ros/install/reactor-cpp-default/include/reactor-cpp-default/reactor-cpp/config.hh
+[0.203s] -- Up-to-date: /home/erling/dev/lf-workspace/lf-ros/install/reactor-cpp-default/lib/libreactor-cpp-default.so.0.0.1
+[0.203s] -- Up-to-date: /home/erling/dev/lf-workspace/lf-ros/install/reactor-cpp-default/lib/libreactor-cpp-default.so.1
+[0.204s] -- Up-to-date: /home/erling/dev/lf-workspace/lf-ros/install/reactor-cpp-default/lib/libreactor-cpp-default.so
+[0.204s] -- Up-to-date: /home/erling/dev/lf-workspace/lf-ros/install/reactor-cpp-default/share/reactor-cpp-default/cmake/reactor-cpp-defaultConfig.cmake
+[0.205s] -- Up-to-date: /home/erling/dev/lf-workspace/lf-ros/install/reactor-cpp-default/share/reactor-cpp-default/cmake/reactor-cpp-defaultConfig-release.cmake
+[0.205s] Invoked command in '/home/erling/dev/lf-workspace/lf-ros/build/reactor-cpp-default' returned '0': /usr/bin/cmake --install /home/erling/dev/lf-workspace/lf-ros/build/reactor-cpp-default

@@ -1,0 +1,33 @@
+target Python
+
+import SentiReader from "SentiReader.lf"
+import SentiIns from "SentiINS.lf"
+import SentiViz from "SentiViz.lf"
+import SentiBridge from "SentiBridge.lf"
+
+
+
+main reactor {
+
+    reader = new SentiReader()
+    ins = new SentiIns()
+    viz = new SentiViz()
+    bridge = new SentiBridge()
+
+    reaction(startup) {=
+        print("Starting SentiFusion Reactor")
+    =}
+
+    reader.imuMsg, reader.gnssMsg -> ins.imuMsg, ins.gnssMsg
+
+    reader.imuMsg, reader.gnssMsg, reader.triggerMsg, reader.rawMsg,
+        ins.robotPos, ins.robotPose -> 
+        bridge.imuMsg, bridge.gnssMsg, bridge.triggerMsg, bridge.rawMsg,
+        bridge.robotPos, bridge.robotPose
+        
+    
+    reader.imuMsg, reader.gnssMsg, reader.triggerMsg, reader.rawMsg,
+        ins.robotPos, ins.robotPose -> 
+        viz.imuMsg, viz.gnssMsg, viz.triggerMsg, viz.rawMsg, viz.robotPos, viz.robotPose
+
+}

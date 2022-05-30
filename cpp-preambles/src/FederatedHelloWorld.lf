@@ -1,0 +1,17 @@
+target Cpp;
+
+public preamble {=
+   using namespace std;
+   #include <iostream>
+   typedef int data_t;  
+=}
+    
+
+main reactor {
+    reaction(startup) {=
+        data_t a = 19;
+        cout <<"A="<<a <<endl;
+    =}
+}
+
+
